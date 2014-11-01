@@ -49,7 +49,7 @@ The details in this guide have been very heavily inspired by several existing st
 <a name="tabs_or_spaces"/>
 ### Tabs or Spaces?
 
-Use **spaces only**, with **2 spaces** per indentation level. Never mix tabs and spaces.
+Use **tabs only**, with **4 spaces** per indentation level. Never mix tabs and spaces.
 
 <a name="maximum_line_length"/>
 ### Maximum Line Length
@@ -125,8 +125,8 @@ Avoid extraneous whitespace in the following situations:
 - Immediately inside parentheses, brackets or braces
 
     ```coffeescript
-       ($ 'body') # Yes
-       ( $ 'body' ) # No
+       someMethod(arg1, arg2) # Yes
+       someMethod( arg1, arg 2 ) # No
     ```
 
 - Immediately before a comma
@@ -152,20 +152,6 @@ Additional recommendations:
     - augmented assignment: `+=`, `-=`, etc.
     - comparisons: `==`, `<`, `>`, `<=`, `>=`, `unless`, etc.
     - arithmetic operators: `+`, `-`, `*`, `/`, etc.
-
-    - _(Do not use more than one space around these operators)_
-
-        ```coffeescript
-           # Yes
-           x = 1
-           y = 1
-           fooBar = 3
-
-           # No
-           x      = 1
-           y      = 1
-           fooBar = 3
-        ```
 
 <a name="comments"/>
 ## Comments
@@ -315,19 +301,10 @@ The function grouping style is not recommended. However, **if the function group
 <a name="strings"/>
 ## Strings
 
-Use string interpolation instead of string concatenation:
-
-```coffeescript
-"this is an #{adjective} string" # Yes
-"this is an " + adjective + " string" # No
-```
-
 Prefer single quoted strings (`''`) instead of double quoted (`""`) strings, unless features like string interpolation are being used for the given string.
 
 <a name="conditionals"/>
 ## Conditionals
-
-Favor `unless` over `if` for negative conditions.
 
 Instead of using `unless...else`, use `if...else`:
 
