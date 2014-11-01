@@ -150,6 +150,14 @@ Additional recommendations:
     - augmented assignment: `+=`, `-=`, etc.
     - comparisons: `==`, `<`, `>`, `<=`, `>=`, `unless`, etc.
     - arithmetic operators: `+`, `-`, `*`, `/`, etc.
+    
+- With groups of assignments, align the `=` signs so it is easier to vertically scan the variables to which values are being assigned
+   
+   ```coffeescript
+   firstName         = user.firstName
+   lastName          = user.lastName
+   combinedNames     = firstName + ' ' + lastName
+   ```
 
 <a name="comments"/>
 ## Comments
@@ -271,30 +279,25 @@ print inspect value
 new Tag(new Value(a, b), new Arg(c))
 ```
 
-You will sometimes see parentheses used to group functions (instead of being used to group function parameters). Examples of using this style (hereafter referred to as the "function grouping style"):
+You will sometimes see parentheses used to group functions (instead of being used to group function parameters). This is **not recommended**. Examples of using this style (hereafter referred to as the "function grouping style"):
 
 ```coffeescript
-($ '#selektor').addClass 'klass'
+(@tags.at 2).remove()
 
-(foo 4).bar 8
+(foo 4).bar(8)
 ```
 
 This is in contrast to:
 
 ```coffeescript
-$('#selektor').addClass 'klass'
+@tags.at(2).remove()
 
-foo(4).bar 8
+foo(4).bar(8)
 ```
 
 In cases where method calls are being chained, some adopters of this style prefer to use function grouping for the initial call only:
 
-```coffeescript
-($ '#selektor').addClass('klass').hide() # Initial call only
-(($ '#selektor').addClass 'klass').hide() # All calls
-```
-
-The function grouping style is not recommended. However, **if the function grouping style is adopted for a particular project, be consistent with its usage.**
+The function grouping style is **not recommended**.
 
 <a name="strings"/>
 ## Strings
