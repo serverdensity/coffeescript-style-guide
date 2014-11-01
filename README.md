@@ -1,10 +1,8 @@
 # CoffeeScript Style Guide
 
-This guide presents a collection of best-practices and coding conventions for the [CoffeeScript][coffeescript] programming language.
+This guide presents a collection of coding conventions for the [CoffeeScript][coffeescript] programming language used in Server Density.
 
-This guide is intended to be community-driven, and contributions are highly encouraged.
-
-Please note that this is a work-in-progress: there is much more that can be specified, and some of the guidelines that have been specified may not be deemed to be idiomatic by the community (in which case, these offending guidelines will be modified or removed, as appropriate).
+Please note that this is a work-in-progress: there is much more that can be specified, and some of the guidelines that have been specified may not be deemed to be idiomatic (in which case, these offending guidelines will be modified or removed, as appropriate).
 
 ## Inspiration
 
